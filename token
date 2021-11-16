@@ -1,0 +1,26 @@
+import nltk
+import nltk.corpus
+from nltk.tokenize import word_tokenize
+token = word_tokenize(b)
+token
+
+len(token)
+from nltk.probability import FreqDist
+fdist = FreqDist(token)
+fdist1 = fdist.most_common(10)
+fdist1
+jointoken = ' '.join(token)
+
+//Stemmer to concatenate strings
+from nltk.stem import LancasterStemmer
+lst = LancasterStemmer()
+stemmed=[]
+
+for word in jointoken :
+    stemmed.append(lst.stem(word))
+ 
+ 
+//Neglecting Stopwords
+from nltk.corpus import stopwords
+a = set(stopwords.words('english'))
+stopwords = [x for x in jointoken if x not in a]
