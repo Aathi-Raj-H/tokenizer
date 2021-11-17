@@ -5,13 +5,15 @@ token = word_tokenize(b)
 token
 
 len(token)
+
+//Frequency distribution
 from nltk.probability import FreqDist
 fdist = FreqDist(token)
 fdist1 = fdist.most_common(10)
 fdist1
 jointoken = ' '.join(token)
 
-//Stemmer to concatenate strings
+//Stemmer to breakdown the strings
 from nltk.stem import LancasterStemmer
 lst = LancasterStemmer()
 stemmed=[]
